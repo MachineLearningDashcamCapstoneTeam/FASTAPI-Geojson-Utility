@@ -1,6 +1,6 @@
-# Machine Learning
+# FAST API
 
-This program uses OpenCV and Tensorflow to detect potholes in Images, and Videos. The model was built using YOLOv5 and the pothole dataset from RoboFlow.com. Currently, this project is under development.
+This program uses Gdownloader to load Google Drive vidoes and process them for mapbox development. The API is currently in development. 
 
 ## Installation
 
