@@ -52,6 +52,4 @@ async def read_root(coordInput : CoordInput):
             raise HTTPException(status_code=404, detail="Video link and Coordinates URL is not valid.")
 
     response = get_gps_data.get_gps_data_from_coords_file(modelInput['coord_link'])
-    if response == 400:
-        raise HTTPException(status_code=404, detail="Unable to process request.")
     return response;

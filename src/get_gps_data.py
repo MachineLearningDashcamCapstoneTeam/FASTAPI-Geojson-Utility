@@ -30,4 +30,4 @@ def get_gps_data_from_coords_file(coordinates_link=''):
         return clean_geojson_data
     except Exception as e:
         logging.error(e)
-        return 400
+        return e
