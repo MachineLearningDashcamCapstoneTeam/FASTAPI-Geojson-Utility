@@ -21,6 +21,7 @@ app = FastAPI(
 origins = [
     "http://localhost",
     "http://localhost:8000",
+    "https://amdcapstone.netlify.app/",
     "*"
 ]
 
@@ -37,7 +38,7 @@ app.add_middleware(
 def read_root():
     return {"Geojson Utility API"}
 
-@app.post("/get_gps_data")
+@app.post("/fetchGPSData")
 async def read_root(coordInput : CoordInput):
     modelInput = coordInput.dict()
 
