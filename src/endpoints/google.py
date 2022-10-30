@@ -12,20 +12,16 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-
 @router.get("/")
 async def read_root():
     return {"Geojson Endpoint"}
 
-
 @router.get("/raw")
 async def read_root(googleCoordinates: GoogleCoordinates):
     modelInput = googleCoordinates.dict()
-
     if validators.url(modelInput['coord_link'].strip()) != True:
         raise HTTPException(
             status_code=404, detail="Coordinates URL is not valid.")
-
     response = get_gps_data.get_raw_gps_data_from_coords_file(
         modelInput['coord_link'])
     return response
@@ -34,11 +30,9 @@ async def read_root(googleCoordinates: GoogleCoordinates):
 @router.get("/clean")
 async def read_root(googleCoordinates: GoogleCoordinates):
     modelInput = googleCoordinates.dict()
-
     if validators.url(modelInput['coord_link'].strip()) != True:
         raise HTTPException(
             status_code=404, detail="Coordinates URL is not valid.")
-
     response = get_gps_data.get_gps_data_from_coords_file(
         modelInput['coord_link'])
     return response
