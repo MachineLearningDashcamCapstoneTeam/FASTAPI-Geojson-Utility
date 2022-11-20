@@ -29,14 +29,14 @@ def get_speed(properties):
     return 0
 
 
-def raw_geojson_to_clean_geojson(raw_geojson):
+def raw_geojson_to_clean_geojson(raw_geojson, file_id = uuid4()):
     gps_element_list = raw_geojson['features']
     now = datetime.now()
     date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
     geojson = {
         "type": "FeatureCollection",
-        "dataName": 'Selected-Trip',
-        "dateTime": date_time,
+        "dataName": f'Selected-Trip-{file_id}',
+        "dateTime": now,
         "dataType": "Point",
         "features": []
     }

@@ -36,6 +36,8 @@ data/images/*
 !data/images/bus.jpg
 !data/*.sh
 
+service-account.json
+
 results*.csv
 
 # Datasets -------------------------------------------------------------------------------------------------------------
