@@ -1,9 +1,9 @@
 
 from ast import Pass
 import logging
-import src.lib.folder_util as folder_util
-import src.lib.gdownload_util as gdownload_util
-import src.lib.geojson_util as geojson_util
+import src.utils.folder_util as folder_util
+import src.utils.gdownload_util as gdownload_util
+import src.utils.geojson_util as geojson_util
 
 data_folder_path = 'src/data'
 coord_save_path = f'{data_folder_path}/coord.json'
