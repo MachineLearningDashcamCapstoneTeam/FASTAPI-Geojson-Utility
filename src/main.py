@@ -1,7 +1,7 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 
-from routes.api import router as api_router
+from src.routes.api import router as api_router
 
 app = FastAPI(
     title="Custom YOLOV5 Machine Learning API",
