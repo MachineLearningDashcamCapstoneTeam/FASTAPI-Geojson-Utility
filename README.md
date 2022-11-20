@@ -15,7 +15,7 @@ npm install
 To start the application, use [Fast API](https://fastapi.tiangolo.com/tutorial/first-steps/).
 
 ```bash
-uvicorn main:app --reload
+uvicorn src.main:app --reload
 ```
 
 

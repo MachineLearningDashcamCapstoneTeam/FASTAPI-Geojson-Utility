@@ -16,7 +16,7 @@ router = APIRouter(
 async def read_root():
     return {"Geojson Endpoint"}
 
-@router.get("/raw")
+@router.post("/raw")
 async def read_root(googleCoordinates: GoogleCoordinates):
     modelInput = googleCoordinates.dict()
     if validators.url(modelInput['coord_link'].strip()) != True:
@@ -27,7 +27,7 @@ async def read_root(googleCoordinates: GoogleCoordinates):
     return response
 
 
-@router.get("/clean")
+@router.post("/clean")
 async def read_root(googleCoordinates: GoogleCoordinates):
     modelInput = googleCoordinates.dict()
     if validators.url(modelInput['coord_link'].strip()) != True:
@@ -37,7 +37,7 @@ async def read_root(googleCoordinates: GoogleCoordinates):
         modelInput['coord_link'])
     return response
 
-@router.get("/machinelearning")
+@router.post("/machinelearning")
 async def read_root(googleVideoCoordinates: GoogleVideoCoordinates):
     modelInput = googleVideoCoordinates.dict()
     if validators.url(modelInput['video_link'].strip()) != True:
