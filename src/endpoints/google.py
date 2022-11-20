@@ -3,7 +3,7 @@ from fastapi import HTTPException
 from fastapi import APIRouter
 from src.models.google import GoogleCoordinates, GoogleVideoCoordinates
 import validators
-import src.lib.get_gps_data as get_gps_data
+import src.utils.get_gps_data as get_gps_data
 
 
 router = APIRouter(
