@@ -7,7 +7,7 @@ This program uses Gdownloader to load Google Drive vidoes and process them for m
 Use the package manager [PIP](https://pypi.org/project/pip/) to install the dependencies.
 
 ```bash
-npm install
+pip requirements
 ```
 
 ## Starting the Application
